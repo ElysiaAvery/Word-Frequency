@@ -39,7 +39,20 @@
       $result = $test_WordFrequency->checkWordFrequency($input_sentence, $input_word);
 
       //Assert
-      $this->assertEquals("she", $result);
+      $this->assertEquals("she" ==  "she", $result);
+    }
+    function test_checkWordFrequency_countWords()
+    {
+      //Arrange
+      $test_WordFrequency = new WordFrequency;
+      $input_sentence = "She smiled and she laughed.!!!";
+      $input_word = "She";
+
+      //Act
+      $result = $test_WordFrequency->checkWordFrequency($input_sentence, $input_word);
+
+      //Assert
+      $this->assertEquals(2, $result);
     }
   }
 ?>

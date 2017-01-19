@@ -13,5 +13,11 @@
     return $app['twig']->render('words.html.twig');
   });
 
+  $app->get("/word_check", function() use($app) {
+    $my_WordFrequency = new WordFrequency;
+    $word_count = $my_WordFrequency->checkWordFrequency($_GET['sentence'], $_GET['word']);
+    return $app['twig']->render('word_count.html.twig', array('result' => $word_count));
+  });
+
   return $app;
 ?>
