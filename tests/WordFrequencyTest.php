@@ -13,7 +13,7 @@
       $result = $test_WordFrequency->checkWordFrequency($input_sentence, $input_word);
 
       //Assert
-      $this->assertEquals("she smiled and she laughed.", $result);
+      $this->assertEquals("she smiled and she laughed." && "she", $result);
     }
   }
 ?>

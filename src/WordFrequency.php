@@ -3,7 +3,7 @@
   {
     function checkWordFrequency($input_sentence, $input_word)
     {
-      //code will go here.
+      return strtolower($input_sentence) && strtolower($input_word);
     }
   }
 ?>
