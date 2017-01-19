@@ -6,8 +6,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>How Many Words:</h1>
-        <h4>{{ result }}</h4>
+        <h1>How many times your word appeared:</h1>
+        {% if result == false %}
+          <h3>There are no matches.</h3>
+        {% else %}
+          <h3>{{ result }}</h3>
+        {% endif %}
     </div>
 </body>
 </html>
