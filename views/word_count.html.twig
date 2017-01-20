@@ -6,11 +6,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>How many times your word appeared:</h1>
+        <h1>How many times "{{ word }}" appeared:</h1>
         {% if result == false %}
           <h3>There are no matches.</h3>
         {% else %}
-          <h3>{{ result }}</h3>
+          <h3>{{ word }} appears {{ result }} times!</h3>
         {% endif %}
     </div>
 </body>

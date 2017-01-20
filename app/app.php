@@ -22,7 +22,7 @@
       return $app['twig']->render('words.html.twig');
     }
     $word_count = $my_WordFrequency->checkWordFrequency($_GET['sentence'], $_GET['word']);
-    return $app['twig']->render('word_count.html.twig', array('result' => $word_count));
+    return $app['twig']->render('word_count.html.twig', array('result' => $word_count, 'word' => $user_word));
   });
 
   return $app;
