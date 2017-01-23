@@ -4,10 +4,11 @@
     function checkWordFrequency($input_sentence, $input_word)
     {
       $counter = 0;
+      $punctuation = [",", ".", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", ":", ";", "'"];
       $lowerSentence = strtolower($input_sentence);
       $lowerWord = strtolower($input_word);
-      $removeSentencePunctuation = preg_replace("/[^a-z]+/i", " ", $lowerSentence);
-      $removeWordPunctuation = preg_replace("/[^a-z]+/i", " ", $lowerWord);
+      $removeSentencePunctuation = str_replace($punctuation, " ", $lowerSentence);
+      $removeWordPunctuation = str_replace($punctuation, " ", $lowerWord);
       $newSentence = explode(" ", $removeSentencePunctuation);
       $arrayLength = count($newSentence);
       for($i = 0; $i < $arrayLength; $i++) {
